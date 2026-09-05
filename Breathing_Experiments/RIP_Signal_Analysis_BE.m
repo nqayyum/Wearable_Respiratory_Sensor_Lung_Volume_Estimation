@@ -100,7 +100,7 @@ if Subject == 1
 else 
     Apnea_thresh_p = 0.5; Apnea_thresh_s = 0.6; % Thresholds for automated boundary refinement
 end
-[Start_Apnea_idx, End_Apnea_idx] = Apnea_Refinement(t_S1, Chest_S1_r, Start_Apnea_idx, End_Apnea_idx,dt,Apnea_thresh_p,Apnea_thresh_s);
+[Start_Apnea_idx, End_Apnea_idx] = Apnea_Refinement(Chest_S1_r, Start_Apnea_idx, End_Apnea_idx,dt,Apnea_thresh_p,Apnea_thresh_s);
 
 % Visualize adjusted boundary points from automated refinement
 figure
