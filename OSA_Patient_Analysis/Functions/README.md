@@ -2,7 +2,7 @@ Alv_MassBalance_VD_P.m was used in the oxygen mass transfer model for dissolved 
 
 Deadspace_MassBalance_P.m was used in the oxygen mass transfer model for dissolved oxygen prediction. Contains the code for the added dead space compartment mass transfer equations
 
-Eupnea_Detection_Final.m was used to extract normal breaths from the specified normal breathing region at the beginning of each study. The extracted normal breaths were then used for the calibration of the lung volume prediction model(s)
+Eupnea_Detection_Patient.m and Eupnea_Detection_Patient_Wake.m were used to extract normal breaths from the specified patient analysis region and from all the annotated wake segments, respectively. The codes are nearly identical, with only some indexing differences. The extracted normal breaths were then used for the calibration of the lung volume prediction model(s)
 
-ResFunction_final.m contains the residuals for each tested lung volume prediction equation solved using the least squares method in the main RIP_Signal_Analysis_BE.m code
+ResFunction_final_patient.m and ResFunction_final_patient_Wake.m contain the residuals for the optimal (power law) lung volume prediction equation and the backup linear equation solved in the main RIP_Signal_Analysis_OSA.m code. It also contains the linear model solved without least squares to be used as a reference. The codes are nearly identical, with some differences in how the RIP signal normalization is done
   - Each equation has residuals for normal breathing and asynchronous breathing during simulated apneas, as well as less influential residuals implemented as soft penalties to ensure that the predicted lung volume is physiologically accurate
